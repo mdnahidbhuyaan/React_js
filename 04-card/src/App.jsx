@@ -1,7 +1,6 @@
 import React from "react";
 import { Bookmark } from "lucide-react";
 import Card from "./Components/Card";
-import User from "./Components/User";
 const App = () => {
 
 const jobOpenings = [
@@ -16,7 +15,7 @@ const jobOpenings = [
     location: "Dhaka, Bangladesh",
   },
   {
-    brandLogo: "https://logo.clearbit.com/google.com",
+    brandLogo: "https://images.unsplash.com/photo-1678483789107-6402b5848d95?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1528",
     companyName: "Google",
     datePosted: "10 days ago",
     post: "Backend Engineer",
@@ -106,12 +105,13 @@ const jobOpenings = [
     location: "Remote, Bangladesh",
   },
 ];
-console.log(jobOpenings)
+
 
   return (
     <div className="parent">
-   {jobOpenings.map(function(elem){
-    return   <Card/>
+   {jobOpenings.map(function(elem,idx){
+    console.log(idx)
+    return   <Card key={idx} company={elem.companyName} post={elem.post} tag1={elem.tag1} tag2={elem.tag2} pay={elem.pay} location={elem.location} brandLogo={elem.brandLogo} datePosted={elem.datePosted} />
   
    })}
     </div>

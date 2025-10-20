@@ -7,8 +7,7 @@ const App = () => {
     <div className=''>
     <Section1/>
     <Section2/>
-    <Section2/>
-    <Section2/>
+    
     </div>
   )
 }
