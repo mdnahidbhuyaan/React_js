@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { X } from 'lucide-react';
 const App = () => {
   const [title, setTitle] = useState("");
   const [details, setDetails] = useState("");
@@ -55,12 +55,15 @@ const App = () => {
       </form>
       <div className=" lg:w-1/2 p-10 bg-gray-500 ">
         <h1 className="text-white text-3xl font-bold">Recent notes</h1>
-        <div className="flex flex-wrap gap-5 mt-1 h-full overflow-auto">
+        <div className="flex flex-wrap items-start justify-start gap-5 mt-1 h-full overflow-auto">
           {task.map(function (elem,idx) {
             return (
-              <div key={idx} className="h-50 w-45 p-4 rounded-2xl bg-blue-200 mt-5">
-                <h3 className="leading-tight text-xl font-bold">{elem.title}</h3>
+              <div key={idx}  className="relative h-50 bg-cover w-45 py-8 px-4  rounded-2xl bg-[url('https://static.vecteezy.com/system/resources/previews/037/152/677/non_2x/sticky-note-paper-background-free-png.png')] mt-5">
+
+               <div>
+                 <h3 className="leading-tight text-xl font-bold">{elem.title}</h3>
                 <p className="mt-2 font-medium text-gray-700">{elem.details}</p>
+               </div>
               </div>
             );
           })}
