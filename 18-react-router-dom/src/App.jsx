@@ -3,7 +3,7 @@ import React from 'react'
 const App = () => {
   return (
     <div>
-      asdf
+      Hello Home
     </div>
   )
 }
